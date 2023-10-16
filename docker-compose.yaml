@@ -6,7 +6,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4000:80"
-  db:
-    image: sqlite
-    volumes:
-      - ./data:/data
