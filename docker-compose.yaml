@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .  # Ruta al directorio actual
+    ports:
+      - "4000:80"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+  db:
+    image: sqlite:latest
+    volumes:
+      - ./data:/data
